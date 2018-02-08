@@ -1,5 +1,5 @@
 # nlx.io
-This repository contains the marketing website of [nlx.io](https://www.nlx.io).
+This repository contains the static website [nlx.io](https://www.nlx.io).
 
 ## Developing
 The site is generated using [Hugo](https://gohugo.io/). When developing locally, please make sure you have installed a version > 0.36. Run:
