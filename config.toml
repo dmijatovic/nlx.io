@@ -1,5 +1,6 @@
 baseURL = "https://www.nlx.io/"
-languageCode = "en-us"
+defaultContentLanguage = "en"
+languageCode = "en"
 title = "NLX"
 theme = "nlx"
 
@@ -22,3 +23,13 @@ googleAnalytics = ""
     weight = -90
     identifier = "docs"
     url = "https://docs.nlx.io/"
+
+[languages]
+[languages.en]
+weight = 0
+languageName = "English"
+
+[languages.nl]
+weight = 1
+languageName = "Nederlands"
+
