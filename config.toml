@@ -15,7 +15,7 @@ googleAnalytics = ""
     name = "About"
     weight = -100
     identifier = "about"
-    url = "/about"
+    url = "/about/"
 
 [[menu.main]]
     name = "Docs"
