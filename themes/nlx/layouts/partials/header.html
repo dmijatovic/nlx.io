@@ -10,7 +10,7 @@
         <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar bg-dark">
             <a class="navbar-brand" href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +42,6 @@
                     </div>
                 </ul>
             </div>
-        </nav>
+        </header>
 
         <main role="main">
