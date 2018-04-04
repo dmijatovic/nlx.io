@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i';
+
+body {
+    font-family: $font;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $gray_50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: auto;
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 768px) {
+    .bd-navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1071;
+    }
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.navbar {
+    padding: 0;
+    background-color: white;
+
+    .dropdown-toggle {
+        color: $gray_50;
+    }
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 1rem !important;
+    color: $gray_30;
+    transition: color $trans-fast;
+
+    &:hover {
+        color: $color_black;
+    }
+
+    .active > & {
+        color: $color_primary;
+    }
+}
+
+.btn-primary {
+    // font-weight: bold;
+    background-color: $color_primary;
+    border-color: transparent !important;
+    box-shadow: none !important;
+
+    &:not(:disabled):not(.disabled) {
+        &:hover {
+            background-color: $color_primary_light;
+        }
+
+        &:focus,
+        &:active {
+            background-color: $color_primary_dark;
+        }
+    }
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+}

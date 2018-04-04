@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">       
+
+        <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+    </head>
+    <body>
+        <header class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="{{ "/" | absLangURL }}"></a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                            <li class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{end}}">
+                                <a class="nav-link" href="{{ .URL | absLangURL }}">
+                                    {{ .Name }}
+                                    {{ if $currentPage.IsMenuCurrent "main" . }}<span class="sr-only">(active)</span>{{end}}
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <div class="dropdown">
+                            <button href="#" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ .Language.LanguageName }}
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                {{ range .Translations }}
+                                    <a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                                {{ end}}
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main role="main">

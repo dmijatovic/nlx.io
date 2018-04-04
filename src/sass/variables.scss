@@ -1,0 +1,24 @@
+$color_primary: #FFBC2C;
+$color_primary_light: lighten($color_primary, 7%);
+$color_primary_dark: darken($color_primary, 7%);
+
+$color_black: #272D30;
+
+$gray_30: lighten(black, 70%);
+$gray_50: lighten(black, 30%);
+
+$font: 'Roboto', sans-serif;
+
+$trans-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+$trans-time-fast: 0.15s;
+$trans-time-normal: 0.25s;
+$trans-time-slow: 0.35s;
+
+$trans-fast: $trans-time-fast ease;
+$trans-normal: $trans-time-normal ease;
+$trans-slow: $trans-time-slow ease;
+
+$trans-material-fast: $trans-time-fast $trans-bezier;
+$trans-material-normal: $trans-time-normal $trans-bezier;
+$trans-material-slow: $trans-time-slow $trans-bezier;

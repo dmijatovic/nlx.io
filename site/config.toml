@@ -1,4 +1,4 @@
-baseURL = "https://www.nlx.io/"
+baseURL = "/"
 defaultContentLanguage = "en"
 languageCode = "en"
 title = "NLX"
