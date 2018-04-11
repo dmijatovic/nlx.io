@@ -1,74 +1,62 @@
-@import 'variables';
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i';
-
 body {
-    font-family: $font;
-    font-size: 18px;
-    line-height: 1.7;
-    color: $gray_50;
+    // color: $dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: auto;
     -webkit-text-size-adjust: 100%;
 }
 
-@media (min-width: 768px) {
-    .bd-navbar {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 1071;
-    }
-}
-
-.content {
-    margin-top: 2rem;
-}
+// @media (min-width: 768px) {
+//     .bd-navbar {
+//         position: -webkit-sticky;
+//         position: sticky;
+//         top: 0;
+//         z-index: 1071;
+//     }
+// }
 
 .navbar {
     padding: 0;
     background-color: white;
 
-    .dropdown-toggle {
-        color: $gray_50;
+    .dropdown .btn {
+        color: $gray-500;
     }
 }
 
-.nav-link {
-    display: inline-flex;
-    align-items: center;
-    height: 56px;
-    padding: 0 1rem !important;
-    color: $gray_30;
-    transition: color $trans-fast;
+.navbar-expand .navbar-nav .nav-item {
+    .nav-link {
+        display: inline-flex;
+        align-items: center;
+        height: 56px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: $gray-500;
+        font-weight: $font-weight-medium;
+        transition: $transition-base;
 
-    &:hover {
-        color: $color_black;
-    }
-
-    .active > & {
-        color: $color_primary;
-    }
-}
-
-.btn-primary {
-    // font-weight: bold;
-    background-color: $color_primary;
-    border-color: transparent !important;
-    box-shadow: none !important;
-
-    &:not(:disabled):not(.disabled) {
         &:hover {
-            background-color: $color_primary_light;
+            color: $dark;
         }
+    }
 
-        &:focus,
-        &:active {
-            background-color: $color_primary_dark;
-        }
+    &.active .nav-link {
+        color: $primary;
     }
 }
 
 .btn-lg {
     font-size: 1.1rem;
+}
+
+.btn {
+    color: white;
+}
+
+.jumbotron {
+    border-radius: 0;
+    background-color: $gray-100;
+    text-align: center;
 }

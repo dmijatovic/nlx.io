@@ -1,13 +1,22 @@
-$color_primary: #FFBC2C;
-$color_primary_light: lighten($color_primary, 7%);
-$color_primary_dark: darken($color_primary, 7%);
+$primary:                     #FFBC2C;
+$secondary:                   #5F90FF;
 
-$color_black: #272D30;
+$font-family-sans-serif:        'Roboto', sans-serif;
+$font-size-base:                1.1rem;
+$line-height-base:              1.7;
 
-$gray_30: lighten(black, 70%);
-$gray_50: lighten(black, 30%);
+$font-weight-light:             200;
+$font-weight-normal:            400;
+$font-weight-medium:            500;
+$font-weight-bold:              700;
 
-$font: 'Roboto', sans-serif;
+$input-btn-padding-y-lg:        .5rem;
+$input-btn-padding-x-lg:        1.2rem;
+
+
+$transition-base:               all .15s ease;
+
+
 
 $trans-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
