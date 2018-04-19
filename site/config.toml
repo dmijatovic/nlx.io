@@ -3,7 +3,6 @@ defaultContentLanguage = "en"
 languageCode = "en"
 title = "NLX"
 theme = "nlx"
-
 googleAnalytics = ""
 
 [[menu.main]]
@@ -27,9 +26,9 @@ googleAnalytics = ""
 [languages]
 [languages.en]
 weight = 0
-languageName = "English"
+languageName = "EN"
 
 [languages.nl]
 weight = 1
-languageName = "Nederlands"
+languageName = "NL"
 

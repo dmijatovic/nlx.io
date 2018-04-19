@@ -1,26 +1,98 @@
 body {
-    // color: $dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: auto;
     -webkit-text-size-adjust: 100%;
 }
 
-// @media (min-width: 768px) {
-//     .bd-navbar {
-//         position: -webkit-sticky;
-//         position: sticky;
-//         top: 0;
-//         z-index: 1071;
-//     }
-// }
-
 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 0;
-    background-color: white;
+    z-index: 1;
+}
 
-    .dropdown .btn {
-        color: $gray-500;
+svg {
+    display: block;
+}
+
+a {
+    transition: $transition-base;    
+}
+
+.content {
+    ul {
+        padding-left: 1rem;
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+            
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                border: 2px solid $secondary;
+                margin-left: -23px;
+                margin-right: 15px;            
+                margin-bottom: 1px;            
+            }
+        }
+    }
+}
+
+.landing_text {
+    position: relative;
+    max-width: 540px;
+}
+
+.landing_illustrations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.landing_guy_bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+    svg {
+        height: 440px;
+        margin: 0 auto;
+    }
+}
+
+.landing_guy {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    svg {
+        height: 265px;
+        margin: 0 auto;
+    }
+}
+
+.landing_buildings {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+
+    svg {
+        height: 650px;
     }
 }
 
@@ -33,9 +105,7 @@ body {
         padding-bottom: 0;
         padding-left: 1rem;
         padding-right: 1rem;
-        color: $gray-500;
-        font-weight: $font-weight-medium;
-        transition: $transition-base;
+        color: white;
 
         &:hover {
             color: $dark;
@@ -56,7 +126,69 @@ body {
 }
 
 .jumbotron {
-    border-radius: 0;
-    background-color: $gray-100;
-    text-align: center;
+    position: relative;
+    min-height: 650px;
+    margin-bottom: 0;
+
+    background-color: $secondary;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    .display-2 {
+        margin-bottom: 0;
+        margin-left: -5px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .container-fluid {
+        max-width: 1440px;
+    }
+}
+
+.jumbotron_readOn {
+    position: relative;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+
+    svg {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    a {
+        position: relative;
+        margin-top: 15px;
+        color: white;
+
+        &:hover {
+            text-decoration: none;
+            color: $dark;
+
+            svg {
+                transform: translateY(5px);
+            }
+        }
+
+        svg {
+            height: 21px;
+            transition: transform $trans-fast;                
+        }
+    }
+}
+
+.section {
+    padding: $jumbotron-padding 0;
+    
+    @include media-breakpoint-up(sm) {
+        padding: ($jumbotron-padding * 2) 0;
+    }
 }
