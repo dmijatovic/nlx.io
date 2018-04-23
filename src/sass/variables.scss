@@ -1,19 +1,26 @@
 $primary:                     #FEBF24;
 $secondary:                   #6190FC;
 
-$font-family-sans-serif:        'Roboto', sans-serif;
+$font-family-sans-serif:        'Lucida Grande', sans-serif;
 $font-size-base:                1rem;
-$line-height-base:              1.8;
+$line-height-base:              1.85;
 
 $font-weight-light:             200;
 $font-weight-normal:            400;
 $font-weight-medium:            500;
 $font-weight-bold:              700;
 
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
 $input-btn-padding-y-lg:        .5rem;
 $input-btn-padding-x-lg:        1.2rem;
 
-$grid-gutter-width:             40px;
+$grid-gutter-width:             60px;
 
 $jumbotron-padding:             4rem;
 
