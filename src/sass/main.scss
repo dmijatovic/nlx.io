@@ -22,9 +22,18 @@ a {
     transition: $transition-base;    
 }
 
+h4 {
+    margin-left: 2.1rem;
+    margin-bottom: .8rem;
+}
+
+.display-5  {
+    margin-bottom: 4rem;
+}
+
 .content {
     ul {
-        padding-left: 1rem;
+        padding-left: 2rem;
         list-style: none;
 
         li {
@@ -45,9 +54,83 @@ a {
     }
 }
 
+.jumbotron {
+    position: relative;
+    margin-bottom: 0;
+
+    background-color: $secondary;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-up(lg) {
+        min-height: 700px;        
+    }    
+
+    .display-2 {
+        margin-bottom: 0;
+        margin-left: -5px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .container-fluid {
+        max-width: 1440px;
+    }
+}
+
+.jumbotron_readOn {
+    position: relative;
+    height: 90px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+
+    > svg {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 10px;
+    }
+
+    a {
+        position: relative;
+        margin-top: 15px;
+        font-size: $font-size-sm;
+        color: white;
+
+        svg {
+            margin: 3px auto 0; 
+            height: 21px;
+            transition: transform $trans-fast;                
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $dark;
+
+            svg {
+                transform: translateY(3px);
+            }
+        }
+    }
+}
+
 .landing_text {
     position: relative;
     max-width: 540px;
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 180px;
+    }    
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 220px;
+    }
 }
 
 .landing_illustrations {
@@ -58,46 +141,150 @@ a {
     bottom: 0;
     z-index: 0;
     overflow: hidden;
-}
 
-.landing_guy_bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    
-    svg {
-        height: 440px;
-        margin: 0 auto;
+    .row {
+        height: 100%;
     }
 }
 
 .landing_guy {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 140px;
     z-index: 2;
 
     svg {
-        height: 265px;
+        height: 400px;
         margin: 0 auto;
+
+        @include media-breakpoint-up(xl) {
+            height: 440px;            
+        }
+
+        &:hover #folder {
+            transform: translateY(-100px);                
+        }
+        
+        #folder {
+            transition: transform $trans-material-slow;
+        }
     }
 }
 
 .landing_buildings {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    svg {
+        height: 440px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+    @include media-breakpoint-up(xs) {
+        right: -30%;        
+    } 
+
+    @include media-breakpoint-up(xl) {
+        right: -10%;
+
+        svg {
+            height: 460px;
+        }
+    }
+
+    @media (min-width: 1900px) {
+        right: 0;          
+    }
+}
+
+.landing_bg_right {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 0;
 
     svg {
-        height: 650px;
+        height: 260px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        svg {
+            height: 300px;
+        }
+    }    
+
+    @media (min-width: 1900px) {
+        svg {
+            height: 350px;
+        }
+    }
+}
+
+.landing_bg_topleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    svg {
+        height: 225px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        left: -200px;
+    }
+    
+    @include media-breakpoint-only(sm) {
+        left: -100px;
+    }
+}
+
+.landing_bg_bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    svg {
+        height: 285px;
+    }
+}
+
+.landing_bg_center {
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    right: 0;
+    z-index: 0;
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+    svg {
+        height: 145px;
+        margin: auto;
     }
 }
 
 .navbar-expand .navbar-nav .nav-item {
+    &.nav-item--lang {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 9px;
+            left: 1px;
+            height: 38px;
+            z-index: -1;
+        }
+    }
     .nav-link {
         display: inline-flex;
         align-items: center;
@@ -124,66 +311,6 @@ a {
 
 .btn {
     color: white;
-}
-
-.jumbotron {
-    position: relative;
-    min-height: 650px;
-    margin-bottom: 0;
-
-    background-color: $secondary;
-    color: white;
-
-    display: flex;
-    align-items: center;
-
-    .display-2 {
-        margin-bottom: 0;
-        margin-left: -5px;
-    }
-
-    h2 {
-        margin-bottom: 20px;
-    }
-
-    .container-fluid {
-        max-width: 1440px;
-    }
-}
-
-.jumbotron_readOn {
-    position: relative;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-
-    svg {
-        height: 100%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
-
-    a {
-        position: relative;
-        margin-top: 15px;
-        color: white;
-
-        &:hover {
-            text-decoration: none;
-            color: $dark;
-
-            svg {
-                transform: translateY(5px);
-            }
-        }
-
-        svg {
-            height: 21px;
-            transition: transform $trans-fast;                
-        }
-    }
 }
 
 .section {
