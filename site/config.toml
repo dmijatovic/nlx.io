@@ -1,6 +1,6 @@
 baseURL = "/"
-defaultContentLanguage = "en"
-languageCode = "en"
+defaultContentLanguage = "nl"
+languageCode = "nl"
 title = "NLX"
 theme = "nlx"
 googleAnalytics = ""

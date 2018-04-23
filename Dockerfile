@@ -1,16 +1,28 @@
-FROM alpine:latest AS build
+FROM node:alpine AS build
 
-# Install build tools.
-RUN apk add --update openssl make git
+# Install required build tools
+RUN apk add --no-cache \
+    build-base \
+    python \
+    openssl \
+    make \
+    git
 
-# Install hugo.
-RUN wget -O - "https://github.com/gohugoio/hugo/releases/download/v0.36/hugo_0.36_Linux-64bit.tar.gz" | tar --no-same-owner -C /usr/local/bin/ -xz hugo
+# Copy only package.json en yarn.lock to make the dependency fetching step optional.
+COPY package.json \
+     yarn.lock \
+     /app/
+
+WORKDIR /app
+RUN yarn install
+
+RUN yarn global add gulp
 
 # Build docs.
 COPY . /app
 WORKDIR /app
-RUN make
+RUN yarn run build
 
 # Copy static docs to alpine-based nginx container.
 FROM nginx:alpine
-COPY --from=build /app/public /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html

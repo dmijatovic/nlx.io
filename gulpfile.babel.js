@@ -6,7 +6,6 @@ import flatten from 'gulp-flatten';
 import postcss from 'gulp-postcss';
 import cssImport from 'postcss-import';
 import cssnext from 'postcss-cssnext';
-import stylus from 'gulp-stylus';
 import sass from 'gulp-sass';
 import BrowserSync from 'browser-sync';
 import webpack from 'webpack';
@@ -41,16 +40,8 @@ gulp.task('css', () =>
 
 gulp.task('sass', () =>
     gulp
-        .src('./src/sass/style.scss')
+        .src('./src/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'))
-        .pipe(browserSync.stream())
-);
-
-gulp.task('stylus', () =>
-    gulp
-        .src('./src/stylus/main.styl')
-        .pipe(stylus())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream())
 );
