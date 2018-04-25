@@ -17,7 +17,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
+                    <svg id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.66 36.76"><title>logo</title><path d="M87.25,23.62a5.27,5.27,0,0,0,4.08,2.27,4.2,4.2,0,0,0,4.14-4.27A3.18,3.18,0,0,0,95,19.74l-5.88-6.28,6.08-7.18a4,4,0,0,0,.45-1.94,4.07,4.07,0,0,0-4-4.34,5.32,5.32,0,0,0-4.53,2.33L83,7.51,78.83,2.33A5.32,5.32,0,0,0,74.3,0a4.07,4.07,0,0,0-4,4.34,3.86,3.86,0,0,0,.46,1.94l6.08,7.18-5.89,6.28a3.25,3.25,0,0,0-.45,1.88,4.2,4.2,0,0,0,4.14,4.27,5.29,5.29,0,0,0,4.08-2.27L83,18.12Z" style="fill:#fdc028"/><path d="M63.62,36.76a4.26,4.26,0,0,0,4.27-4.21,4.31,4.31,0,0,0-4.27-4.27H50.16V4.53a4.53,4.53,0,1,0-9.06,0v27.7a4.5,4.5,0,0,0,4.53,4.53ZM0,32.23a4.51,4.51,0,0,0,4.53,4.53,4.51,4.51,0,0,0,4.53-4.53V14.17L23,24.92v7.31a4.53,4.53,0,0,0,9.06,0V4.53a4.53,4.53,0,1,0-9.06,0v8.8L7.05.91A4.17,4.17,0,0,0,4.27,0,4.38,4.38,0,0,0,0,4.4Z" style="fill:#ededee"/></svg>
+
+                    <!-- <ul class="navbar-nav">
                         {{ $currentPage := . }}
                         {{ range .Site.Menus.main }}
                             <li class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{end}}">
@@ -27,12 +29,12 @@
                                 </a>
                             </li>
                         {{ end }}
-                    </ul>
+                    </ul> -->
 
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ml-auto">
                         {{ range .Translations }}
                             <li class="nav-item nav-item--lang">
-                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.62 35"><title>landing-lang-bg</title><path d="M41.74,26.56c-2,4.32-6.51,7.08-11.12,8s-9.34.24-13.9-.78c-5.83-1.3-12-3.54-15-8.76S-.12,12.91,3.62,8.2,13.25.9,19.13.22s11.8.35,17.5,1.84c5,1.31,10.62,3.54,12.43,8.5,1.22,3.35.34,7.23-1.49,10.34s-4.5,5.61-7.14,8.06" style="fill:#568eef"/></svg>
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.79 45"><title>landing-lang-bg</title><path d="M53.66,34.14c-2.6,5.55-8.37,9.11-14.29,10.3s-12,.31-17.87-1C14,41.77,6,38.89,2.15,32.18S-.16,16.59,4.65,10.54,17,1.16,24.6.28,39.77.74,47.09,2.64c6.5,1.7,13.65,4.56,16,10.94,1.57,4.31.44,9.29-1.91,13.3S55.37,34.09,52,37.23" style="fill:#588ce8"/></svg>
                                 <a class="nav-link" href="{{ .Permalink }}">
                                     {{ .Language.LanguageName }}
                                 </a>
