@@ -11,6 +11,10 @@ to have a live server running at http://localhost:1313. Or use Docker with:
     docker-compose up
 
 ## Building
+To build a local static version of the site run:
+
+    yarn run build
+
 To build a new container run:
 
     docker build -t nlxio/nlxio .

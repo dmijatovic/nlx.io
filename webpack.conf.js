@@ -27,10 +27,10 @@ export default {
 
     context: path.join(__dirname, 'src'),
     entry: {
-        app: ['./js/app']
+        main: ['./js/main']
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist/js'),
         publicPath: '/',
         filename: '[name].js'
     },
