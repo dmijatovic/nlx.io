@@ -6,12 +6,6 @@ theme = "nlx"
 googleAnalytics = ""
 
 [[menu.main]]
-    name = "NLX"
-    weight = -110
-    identifier = "nlx"
-    url = "/"
-
-[[menu.main]]
     name = "About"
     weight = -100
     identifier = "about"

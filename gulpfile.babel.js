@@ -10,6 +10,8 @@ import sass from 'gulp-sass';
 import BrowserSync from 'browser-sync';
 import webpack from 'webpack';
 import webpackConfig from './webpack.conf';
+import svgmin from 'gulp-svgmin';
+import path from 'path';
 
 const browserSync = BrowserSync.create();
 
@@ -22,10 +24,10 @@ gulp.task('hugo', cb => buildSite(cb));
 gulp.task('hugo-preview', cb => buildSite(cb, hugoArgsPreview));
 
 // Build/production tasks
-gulp.task('build', ['sass', 'js', 'fonts'], cb =>
+gulp.task('build', ['sass', 'js', 'fonts', 'svg'], cb =>
     buildSite(cb, [], 'production')
 );
-gulp.task('build-preview', ['sass', 'js', 'fonts'], cb =>
+gulp.task('build-preview', ['sass', 'js', 'fonts', 'svg'], cb =>
     buildSite(cb, hugoArgsPreview, 'production')
 );
 
@@ -64,6 +66,25 @@ gulp.task('js', cb => {
     });
 });
 
+gulp.task('svg', () =>
+     gulp
+        .src('./src/svg/**/*.svg')
+        .pipe(svgmin(function getOptions(file) {
+            var filename = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [
+                    { removeTitle: true },
+                    { removeDoctype: true }, 
+                    { removeComments: true },
+                    { cleanupNumericValues: { floatPrecision: 2 } },
+                    { convertColors: { names2hex: true, rgb2hex: true } },
+                    { cleanupIDs: { remove: false, minify: true, prefix: `${filename}-` } }
+                ]
+            }
+        }))
+        .pipe(gulp.dest('./dist/svg'))
+)
+
 // Move all fonts in a flattened directory
 gulp.task('fonts', () =>
     gulp
@@ -74,7 +95,7 @@ gulp.task('fonts', () =>
 );
 
 // Development server with browsersync
-gulp.task('server', ['hugo', 'sass', 'js', 'fonts'], () => {
+gulp.task('server', ['hugo', 'sass', 'js', 'svg', 'fonts'], () => {
     browserSync.init({
         server: {
             baseDir: './dist'
@@ -82,6 +103,7 @@ gulp.task('server', ['hugo', 'sass', 'js', 'fonts'], () => {
     });
     gulp.watch('./src/js/**/*.js', ['js']);
     gulp.watch('./src/sass/**/*.scss', ['sass']);
+    gulp.watch('./src/svg/**/*.svg', ['svg']);
     gulp.watch('./src/fonts/**/*', ['fonts']);
     gulp.watch('./site/**/*', ['hugo']);
 });

@@ -1,3 +1,7 @@
+main {
+    overflow-x: hidden;
+}
+
 .align-middle > [class^="col-"],
 .align-middle > [class*=" col-"] {
     display: flex;
@@ -80,10 +84,19 @@ h4 {
     font-size: 1.1rem;
 }
 
+.btn {
+    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    word-spacing: .1em;
+    box-shadow: 0 2px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    border-radius: 4px;
+}
+
 .btn-primary {
     color: white;
-    font-weight: $font-weight-medium;
-
+    
     &:not(.disabled):not(.disabled) {
         &:hover,
         &:active {
@@ -98,10 +111,9 @@ h4 {
 
 .section {
     padding: $jumbotron-padding 0;
-    overflow: hidden;
     
     @include media-breakpoint-up(sm) {
-        padding: 3rem 0;
+        padding: 6rem 0;
     }
 }
 
@@ -171,6 +183,7 @@ small, .small {
 .jumbotron_readOn {
     position: relative;
     height: 90px;
+    margin-bottom: 100px;
     overflow: hidden;
 
     display: flex;
@@ -267,7 +280,7 @@ small, .small {
 
     #arm {
         transform-origin: 50% 20%;
-        animation: guy-arm 6s ease infinite;        
+        // animation: guy-arm 6s ease infinite;
     }
 }
 
@@ -394,17 +407,18 @@ small, .small {
 
 #landing_open {
     min-width: 100%;
-    height: 650px;
+    height: 600px;
     order:1;
+    margin-top: -80px;
+    margin-bottom: -60px;
 
     @include media-breakpoint-down(xs) {
         height: 450px;
-        margin-top: -130px;        
     }
     @include media-breakpoint-down(md) {
         margin-left: -60px;
         margin-right: -60px;
-    }    
+    }
 }
 
 #landing_privacy {
@@ -431,7 +445,7 @@ small, .small {
 #landing_safe {
     align-self: flex-start;
     // min-width: 100%;
-    height: 300px;
+    height: 280px;
     margin-top: 60px;
     order:1;
 
