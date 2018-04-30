@@ -1,5 +1,13 @@
 .page-landing {
-    color: $gray-700;
+    main {
+        font-size: 1.2rem;    
+        color: $gray-700;
+
+        @include media-breakpoint-down(md) {
+            font-size: calc(1.0625rem + (3 * (100vw - 400px)/ 624));
+        }        
+    }
+
 
     .jumbotron {
         position: relative;
