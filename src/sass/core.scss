@@ -100,12 +100,11 @@ p {
     margin-bottom: 2rem;
 }
 
-.btn-lg {
+.btn-lg, .btn-group-lg > .btn {
     font-size: 1.1rem;
 }
 
 .btn {
-    font-size: 1rem;
     font-weight: $font-weight-medium;
     word-spacing: 1px;
     border-radius: 4px;

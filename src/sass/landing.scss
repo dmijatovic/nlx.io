@@ -71,7 +71,7 @@
         position: relative;
 
         h2 {
-            font-size: 38px;
+            font-size: 40px;
             font-weight: $font-weight-normal;
             margin-bottom: 15px;
         }
@@ -83,18 +83,11 @@
     }
 
     .landing_intro-wrapper {
-        
+        max-width: 540px;    
+
         @include media-breakpoint-down(md) {
             margin: 0 auto;
-        }
-
-        @include media-breakpoint-down(lg) {
-            max-width: 500px;            
-        }
-        
-        @include media-breakpoint-up(lg) {
-            max-width: 540px;            
-        }        
+        }    
     }
 
     .landing_illustrations {
