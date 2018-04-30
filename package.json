@@ -48,5 +48,8 @@
   "devDependencies": {
     "gulp-sass": "^3.2.1",
     "gulp-stylus": "^2.7.0"
+  },
+  "engines": {
+    "node": "9.x"
   }
 }
