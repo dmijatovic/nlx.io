@@ -107,9 +107,7 @@ p {
 .btn {
     font-size: 1rem;
     font-weight: $font-weight-medium;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    word-spacing: .1em;
+    word-spacing: 1px;
     border-radius: 4px;
 }
 
