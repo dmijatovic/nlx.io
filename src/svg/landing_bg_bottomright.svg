@@ -1,1 +1,15 @@
-        <svg id="landing_bg_bottomright" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1381.99 770"><title>landing-bg-bottomright</title><path d="M1382,770.2,0,771.28c62-3.55,114-16.18,171-48.83s107.7-74.5,162.81-110c155.23-100,348-165.81,533.5-150.92,0,0,194.64,25.29,291.83,56.81,77,25,149.46,61.19,222.88,93.25" style="fill:#488de0"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1662.1 313.2" enable-background="new 0 0 1662.1 313.2" xml:space="preserve">
+<g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="13800.6367" y1="166.5759" x2="12964.2812" y2="156.9935" gradientTransform="matrix(-1 0 0 1 14168.4189 0)">
+		<stop  offset="1.153274e-03" style="stop-color:#4786F4"/>
+		<stop  offset="0.3297" style="stop-color:#6DA2FC"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M830.1,313.2l832.1,0c-62-3.6-114-14.7-171-47.5s-107.7-75-162.8-110.7
+		C1182.8,60.7,1007.7-4.5,833.1,0.2l0,0C658.4-4.5,479.3,60.7,333.8,155c-55.1,35.7-105.9,77.8-162.8,110.7S62,309.7,0,313.2
+		l832.1,0L830.1,313.2z"/>
+</g>
+</svg>

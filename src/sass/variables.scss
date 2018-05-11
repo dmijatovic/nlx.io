@@ -1,8 +1,23 @@
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
 // Color
 $primary:                     #FEBF24;
-$secondary:                   #6190FC;
+$secondary:                   #3D83FA;
+$color-text:                  #5b5e6d;
+$body-color:                    $color-text;
+
+$sec-100: tint($secondary, 95%);
+$sec-200: #B4D3FC;
+$sec-500: tint($secondary, 35%);
+
 
 // $body-color:                  #435166;
+$tooltip-max-width:             340px;
+$tooltip-bg:                    white;
+$tooltip-color:                 $color-text;
+$tooltip-opacity:               1;
 
 // Font weight
 $font-weight-light:             300;
@@ -14,7 +29,7 @@ $font-weight-bold:              700;
 $font-family-sans-serif:        'Muli', sans-serif;
 $font-size-base:                1.1rem;
 $font-weight-base:              $font-weight-normal;
-$line-height-base:              1.8;
+$line-height-base:              1.75;
 
 // Heading
 $headings-margin-bottom:        1rem;
@@ -36,7 +51,7 @@ $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 1140px
+    xl: 1240px
 );
 
 // Grid
