@@ -75,6 +75,8 @@ gulp.task('clean-scripts', function () {
 });
 
 gulp.task('svg', () =>
+    del([svgDest]).then(
+
      gulp
         .src(svgSrc)
         .pipe(svgmin(function getOptions(file) {
@@ -91,6 +93,7 @@ gulp.task('svg', () =>
             }
         }))
         .pipe(gulp.dest(svgDest))
+    )
 )
 
 // Move all fonts in a flattened directory
@@ -103,8 +106,8 @@ gulp.task('fonts', () =>
 );
 
 // Development server with browsersync
-gulp.task('server', ['clean-scripts', 'scripts'], () => {})
-gulp.task('scripts', ['svg', 'hugo', 'sass', 'js', 'fonts'], () => {
+gulp.task('serverr', ['clean-scripts', 'scripts'], () => {})
+gulp.task('server', ['svg', 'hugo', 'sass', 'js', 'fonts'], () => {
     browserSync.init({
         server: {
             baseDir: './dist'
