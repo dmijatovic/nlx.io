@@ -12,6 +12,7 @@ import webpack from 'webpack';
 import webpackConfig from './webpack.conf';
 import svgmin from 'gulp-svgmin';
 import path from 'path';
+import del from 'del';
 
 const browserSync = BrowserSync.create();
 
@@ -66,9 +67,16 @@ gulp.task('js', cb => {
     });
 });
 
+var svgSrc = './src/svg/**/*.svg';
+var svgDest = './site/static/svg';
+
+gulp.task('clean-scripts', function () {
+    del([svgDest]);
+});
+
 gulp.task('svg', () =>
      gulp
-        .src('./src/svg/**/*.svg')
+        .src(svgSrc)
         .pipe(svgmin(function getOptions(file) {
             var filename = path.basename(file.relative, path.extname(file.relative));
             return {
@@ -82,7 +90,7 @@ gulp.task('svg', () =>
                 ]
             }
         }))
-        .pipe(gulp.dest('./dist/svg'))
+        .pipe(gulp.dest(svgDest))
 )
 
 // Move all fonts in a flattened directory
@@ -95,7 +103,8 @@ gulp.task('fonts', () =>
 );
 
 // Development server with browsersync
-gulp.task('server', ['hugo', 'sass', 'js', 'svg', 'fonts'], () => {
+gulp.task('server', ['clean-scripts', 'scripts'], () => {})
+gulp.task('scripts', ['svg', 'hugo', 'sass', 'js', 'fonts'], () => {
     browserSync.init({
         server: {
             baseDir: './dist'

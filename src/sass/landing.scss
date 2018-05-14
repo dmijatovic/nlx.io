@@ -8,24 +8,24 @@
         padding-right: 0;
     }
 
-    .info {
+    .compare-info {
         display: inline-block;
         vertical-align: middle;
-        height: 18px;
         margin-left: 2px;
         margin-bottom: 4px;
 
-        #primary {
-            fill: $gray-400;
-            transition: fill $trans-normal;
-        }
-        #secondary {
-            fill: $gray-100;
+        svg {
+            height: 18px;
+            
+            path {
+                fill: $gray-400;
+                transition: fill $trans-normal;
+            }
         }
 
         &:hover {
-            #primary {
-                fill: $gray-600;
+            svg path {
+                fill: $primary;
             }
         }
     }

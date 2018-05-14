@@ -46,6 +46,9 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "del": "^3.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-dest": "^0.2.0",
     "gulp-sass": "^3.2.1",
     "gulp-stylus": "^2.7.0"
   }
