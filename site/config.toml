@@ -5,11 +5,11 @@ title = "NLX"
 theme = "nlx"
 googleAnalytics = ""
 
-[[menu.main]]
-    name = "About"
-    weight = -100
-    identifier = "about"
-    url = "/about/"
+# [[menu.main]]
+#     name = "About"
+#     weight = -100
+#     identifier = "about"
+#     url = "/about/"
 
 [[menu.main]]
     name = "Docs"

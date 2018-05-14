@@ -78,11 +78,21 @@
     svg > * {
         will-change: opacity;
         transition: opacity $trans-slow;
+        
+        &[id^=connection] path {
+            transition: stroke-width $trans-slow;
+        }
     }
 
     &.highlight-connection  {
-        .comparison_illustration svg > *:not([id^=connection]) {
-            opacity: 0.25;
+        .comparison_illustration svg {
+            > *[id^=connection] path {
+                stroke-width: 2px;
+            }
+
+            > *:not([id^=connection]) {
+                opacity: 0.25;
+            }
         }
     }
 
@@ -322,7 +332,7 @@
         }
 
         @include media-breakpoint-down(xl) {
-            height: 400px;            
+            height: 380px;            
             bottom: 90px;     
             left: calc(50% + 15px);                                       
         }
@@ -345,8 +355,8 @@
 
     #landing_bg_bottomright {
         @include media-breakpoint-down(xl) {
-            height: 210px;
-            left: calc(50% - 170px);            
+            height: 205px;
+            left: calc(50% - 160px);            
         }        
 
         @include media-breakpoint-up(xl) {
