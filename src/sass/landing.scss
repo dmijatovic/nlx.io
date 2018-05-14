@@ -80,20 +80,20 @@
         transition: opacity $trans-slow;
     }
 
-    &.highlight-connection {
-        svg > *:not([id^=connection]) {
+    &.highlight-connection  {
+        .comparison_illustration svg > *:not([id^=connection]) {
             opacity: 0.25;
         }
     }
 
     &.highlight-apps {
-        svg > *:not([id^=app]) {
+        .comparison_illustration svg > *:not([id^=app]) {
             opacity: 0.25;
         }
     }
 
     &.highlight-logging {
-        svg > *:not([id^=log]) {
+        .comparison_illustration svg > *:not([id^=log]) {
             opacity: 0.25;
         }
     }
