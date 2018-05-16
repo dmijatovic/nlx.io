@@ -63,11 +63,174 @@
     }
 }
 
+$color-off: #0452A0;
+
+@keyframes lamp-1 {
+    0% {
+        fill: $primary;
+    }
+    14% {
+        fill: $primary;
+    }
+    15% {
+        fill: $color-off;
+    }
+    16% {
+        fill: $primary;
+    }
+    18% {
+        fill: $primary;
+    }
+    19% {
+        fill: $color-off;
+    }
+    21% {
+        fill: $primary;
+    }
+    23% {
+        fill: $primary;
+    }
+    24% {
+        fill: $color-off;
+    }
+    25% {
+        fill: $primary;
+    }
+    70% {
+        fill: $primary;
+    }
+    71% {
+        fill: $color-off;
+    }
+    72% {
+        fill: $primary;
+    }
+    100% {
+        fill: $primary;
+    }
+}
+
+@keyframes lamp-2 {
+    0% {
+        fill: $primary;
+    }
+    40% {
+        fill: $primary;
+    }
+    41% {
+        fill: $color-off;
+    }
+    42% {
+        fill: $primary;
+    }
+    45% {
+        fill: $primary;
+    }
+    46% {
+        fill: $color-off;
+    }
+    48% {
+        fill: $primary;
+    }
+    78% {
+        fill: $primary;
+    }
+    79% {
+        fill: $color-off;
+    }
+    80% {
+        fill: $primary;
+    }
+    100% {
+        fill: $primary;
+    }
+}
+
+@keyframes lamp-3 {
+    0% {
+        fill: $primary;
+    }
+    30% {
+        fill: $primary;
+    }
+    31% {
+        fill: $color-off;
+    }
+    32% {
+        fill: $primary;
+    }
+    55% {
+        fill: $primary;
+    }
+    56% {
+        fill: $color-off;
+    }
+    58% {
+        fill: $primary;
+    }
+    88% {
+        fill: $primary;
+    }
+    89% {
+        fill: $color-off;
+    }
+    90% {
+        fill: $primary;
+    }
+    100% {
+        fill: $primary;
+    }
+}
+
+@keyframes lamp-4 {
+    0% {
+        fill: $primary;
+    }
+    34% {
+        fill: $primary;
+    }
+    35% {
+        fill: $color-off;
+    }
+    36% {
+        fill: $primary;
+    }
+    68% {
+        fill: $primary;
+    }
+    69% {
+        fill: $color-off;
+    }
+    70% {
+        fill: $primary;
+    }
+    72% {
+        fill: $primary;
+    }
+    73% {
+        fill: $color-off;
+    }
+    74% {
+        fill: $primary;
+    }
+    80% {
+        fill: $primary;
+    }
+    81% {
+        fill: $color-off;
+    }
+    82% {
+        fill: $primary;
+    }
+    100% {
+        fill: $primary;
+    }
+}
+
 .comparison_side {
     @include media-breakpoint-down(md) {
         margin-top: 40px;        
     }
-
 
     &#old {
         ul li:before {
@@ -83,6 +246,32 @@
             transition: stroke-width $trans-slow;
         }
     }
+
+    [id^=link] path {
+        transform: translateY(30px);
+        transition: transform $trans-material-slow;
+    }
+
+    [id^=link-mobile] path {
+        transform: translate(25px, 20px);
+    }    
+
+    [id^=screen] {
+        transition: fill $trans-slow;        
+    }
+
+    [id^=lamp-1] {
+        animation: lamp-1 5s linear infinite;
+    }    
+    [id^=lamp-2] {
+        animation: lamp-2 5s linear infinite;
+    }    
+    [id^=lamp-3] {
+        animation: lamp-3 5s linear infinite;
+    }    
+    [id^=lamp-4] {
+        animation: lamp-4 5s linear infinite;
+    }    
 
     &.highlight-connection  {
         .comparison_illustration svg {
@@ -100,6 +289,21 @@
         .comparison_illustration svg > *:not([id^=app]) {
             opacity: 0.25;
         }
+
+        
+        [id^=link] path {
+            transition-delay: .5s;
+            transform: translateY(0);                
+        }
+
+        [id^=link-mobile] path {
+            transform: translate(0, 0);            
+        }        
+
+        [id^=screen] {
+            transition-delay: .5s;
+            fill: #3D83FA;
+        }        
     }
 
     &.highlight-logging {
