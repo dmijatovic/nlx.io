@@ -88,9 +88,29 @@ a {
     transition: $transition-base;    
 }
 
-h4 {
+h3 {
+    color: $gray-900;    
     font-size: 1.8rem;
     margin-bottom: .6rem;
+
+    &.inset {
+        margin-left: 2rem;
+    }
+}
+
+h4 {
+    color: $gray-900;    
+    font-size: 1.4rem;
+    font-weight: $font-weight-medium;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+
+    // #old & {
+    //     color: $gray-400;
+    // }
+    // #new & {
+    //     color: $secondary;
+    // }
 
     &.inset {
         margin-left: 2rem;
@@ -132,7 +152,7 @@ p {
 }
 
 .section {
-    padding: $jumbotron-padding 0;
+    padding: 2rem 0;
     
     @include media-breakpoint-up(md) {
         padding: 6rem 0;

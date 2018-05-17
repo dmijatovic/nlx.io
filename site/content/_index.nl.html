@@ -34,7 +34,6 @@ title = "Eenvoudig en veilig data uitwisselen"
 </div>    
 
 <section class="section" id="whatsnew">
-    <h4 class="text-center">Wat is nieuw?</h2>    
     <div class="container comparison">
         <div class="row">
             <div class="col-md-6">
@@ -42,23 +41,26 @@ title = "Eenvoudig en veilig data uitwisselen"
                     <div class="comparison_illustration">
                         {{<svg "static/svg/landing_old.svg">}}                        
                     </div>
-                    <ul>
-                        <li>De <span class="compare-highlight" id="connection">verbinding</span> tussen en binnen overheidsorganisaties is onnodig ingewikkeld
-                            <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Gegevens die je opvraagt leggen een chaotische en onnodig ingewikkelde route af voordat ze bij jou terecht komen.">
-                                {{<svg "static/svg/info.svg">}}
-                            </span>
-                        </li>
-                        <li>Overheden maken gebruik van vaak honderden verschillende <span class="compare-highlight" id="apps">ICT-systemen</span>
-                            <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Doordat er honderden koppelingen tussen de ICT-systemen worden gebruikt, worden je gegevens talloze keren opgeslagen op verschillende plekken. Hierdoor is er geen overzicht van wie jouw gegevens inziet en is er geen eenduidige manier om data op te vragen.">
-                                {{<svg "static/svg/info.svg">}}
-                            </span>
-                        </li>
-                        <li><span class="compare-highlight" id="logging">Logging</span> gebeurt niet altijd, en op verschillende plekken
-                            <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Er is geen centraal punt waar je alle gegevensaanvragen kan inzien, als deze al worden bijgehouden. Zo is er geen overzicht over wie welke data aanvraagt en waarom, waardoor de veiligheid van je gegevens niet gegarandeerd kan worden.">
-                                {{<svg "static/svg/info.svg">}}
-                            </span>
-                        </li>
-                    </ul>
+                    <div class="comparison_content">
+                        <h4>Huidige situatie</h4>
+                        <ul>
+                            <li>De <span class="compare-highlight" id="connection">verbinding</span> tussen en binnen overheidsorganisaties is onnodig ingewikkeld
+                                <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Gegevens die je opvraagt leggen een chaotische en onnodig ingewikkelde route af voordat ze bij jou terecht komen.">
+                                    {{<svg "static/svg/info.svg">}}
+                                </span>
+                            </li>
+                            <li>Overheden maken gebruik van vaak honderden verschillende <span class="compare-highlight" id="apps">ICT-systemen</span>
+                                <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Doordat er honderden koppelingen tussen de ICT-systemen worden gebruikt, worden je gegevens talloze keren opgeslagen op verschillende plekken. Hierdoor is er geen overzicht van wie jouw gegevens inziet en is er geen eenduidige manier om data op te vragen.">
+                                    {{<svg "static/svg/info.svg">}}
+                                </span>
+                            </li>
+                            <li><span class="compare-highlight" id="logging">Logging</span> gebeurt niet altijd, en op verschillende plekken
+                                <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Er is geen centraal punt waar je alle gegevensaanvragen kan inzien, als deze al worden bijgehouden. Zo is er geen overzicht over wie welke data aanvraagt en waarom, waardoor de veiligheid van je gegevens niet gegarandeerd kan worden.">
+                                    {{<svg "static/svg/info.svg">}}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">        
@@ -66,6 +68,7 @@ title = "Eenvoudig en veilig data uitwisselen"
                     <div class="comparison_illustration">
                         {{<svg "static/svg/landing_new.svg">}}                                                
                     </div>
+                    <h4>Wat is nieuw?</h4>                    
                     <ul>
                         <li>NLX is <span class="compare-highlight" id="connection">één stuk software</span> dat overheidsorganisaties met elkaar verbindt
                             <span class="compare-info" data-toggle="tooltip" data-placement="top" title="Gegevens die je opvraagt maken nu geen omwegen meer en komen direct bij jou terecht.">
@@ -96,7 +99,7 @@ title = "Eenvoudig en veilig data uitwisselen"
                 {{<svg "static/svg/landing_open.svg">}}
             </div>
             <div class="col-md-7 col-lg-6">
-                <h4>Open</h4>
+                <h3>Open</h3>
                 <p>
                     NLX is gebaseerd op open software. Hierdoor kan NLX gemakkelijk worden hergebruikt door gemeenten, andere overheden en externe organisaties. Ook kan iedereen het bouwproces inzien. Bovendien kan iedere leverancier of andere partij applicaties en services ontwikkelen die aansluiten op NLX.
                 </p>
@@ -109,7 +112,7 @@ title = "Eenvoudig en veilig data uitwisselen"
     <div class="container">
         <div class="row align-middle">
             <div class="col-md-7 col-lg-6 sm-order-1">
-                <h4>Privacy</h4>
+                <h3>Privacy</h3>
                 <p>
                     Met NLX kan iedereen inzicht krijgen in de verwerking van zijn of haar persoonsgegevens. Daarnaast bevat de software functies die overheden helpen om aan de verplichtingen van de nieuwe privacywetgeving te voldoen, zoals centrale logging. Ook maakt NLX geen kopieën van gegevens, wat de kans verkleint dat gegevens bij verkeerde personen of op onjuiste plekken belanden.
                 </p>
@@ -128,7 +131,7 @@ title = "Eenvoudig en veilig data uitwisselen"
                 {{<svg "static/svg/landing_safe.svg">}}
             </div>
             <div class="col-md-7 col-lg-6">
-                <h4>Veilig</h4>
+                <h3>Veilig</h3>
                 <p>
                     NLX gebruikt een nieuwe techniek om te zorgen dat alleen organisaties die daartoe bevoegd zijn toegang tot gegevens krijgen. Bovendien wordt alle communicatie versleuteld door middel van encryptie. Alle ingaande en uitgaande gegevens krijgen daarnaast een uniek nummer, waardoor aanvragen en verzoeken over het gehele NLX netwerk terug te vinden zijn.
                 </p>
