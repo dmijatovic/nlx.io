@@ -357,7 +357,8 @@ $color-off: #0452A0;
         background: linear-gradient(90deg, $secondary, $sec-200);
 
         color: white;
-
+        font-weight: $font-weight-normal;
+        
         display: flex;
         align-items: center;
 
