@@ -16,19 +16,19 @@ window.addEventListener('scroll', () => {
     const illustrationsHeight = document.querySelector('.landing_illustrations').getBoundingClientRect().height;
 
     if (scrollY > illustrationsHeight) {
-        tl.pause()        
+        tl.pause()
     } else {
         tl.play()
     }
 })
 
-const hoverElements = document.querySelectorAll('.compare-highlight');
+const hoverElements = document.querySelectorAll('[data-highlight]');
 
 Array.from(hoverElements).forEach(hoverElement => {
-    const thisId = hoverElement.id
+
+    const thisId = hoverElement.getAttribute('data-highlight')
 
     const wrapper = hoverElement.closest('.comparison_side')
-    const wrapperId = wrapper.id
 
     hoverElement.addEventListener('mouseenter', () => {
         wrapper.classList.add(`highlight-${thisId}`)
@@ -46,7 +46,6 @@ $(function () {
 })
 
 document.querySelector('#goto').onclick = function (e) {
-    console.log('scroll')
     e.preventDefault()
     scrollToElement(this.getAttribute('href'), 1250)
 }
