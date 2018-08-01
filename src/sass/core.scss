@@ -26,7 +26,13 @@ svg {
 }
 
 a {
+    color: $secondary;
     transition: $transition-base;
+
+    &:hover {
+        color: $sec-500;
+        text-decoration: none;
+    }
 }
 
 h3 {
