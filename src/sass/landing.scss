@@ -337,16 +337,6 @@ $color-off: #0452A0;
 }
 
 .page-landing {
-    main {
-        // @include media-breakpoint-down(xl) {
-        //     font-size: 1.05rem;
-        // }
-
-        // @include media-breakpoint-up(xl) {
-        //     font-size: 1.15rem;
-        // }
-    }
-
     h3 {
         @include media-breakpoint-down(md) {
             margin-top: 1rem;

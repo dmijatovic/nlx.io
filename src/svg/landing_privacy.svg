@@ -8,11 +8,11 @@
 		c-15.3-7.9-27.8-29.5-22.4-49.3C5,341,16,332.6,26.7,327.1C117.3,281.3,175.9,360.1,304.6,327.5"/>
 </g>
 <g>
-	
+
 		<rect x="323" y="161.5" transform="matrix(-0.9933 0.116 -0.116 -0.9933 677.4405 470.7025)" fill="#044982" width="4" height="187.2"/>
-	
+
 		<rect x="159.7" y="165.5" transform="matrix(0.9933 0.116 -0.116 0.9933 31.1442 -17.0068)" fill="#044982" width="4" height="187.2"/>
-	
+
 		<rect x="290.1" y="165.5" transform="matrix(0.9933 0.116 -0.116 0.9933 32.0244 -32.1354)" fill="#044982" width="4" height="187.2"/>
 	<polyline fill="#3D83FA" points="186.6,0 162.5,212.3 311.6,212.3 335.6,0 186.6,0 	"/>
 	<polygon fill="#6DA2FC" points="305.9,212.3 156.8,212.3 181.3,0 330.3,0 	"/>
@@ -40,7 +40,7 @@
 	</g>
 	<path fill="#044982" d="M365.3,350.1l-1.5,11.4c0,0.4-0.3,0.6-0.6,0.7l-9.2,2.2c0,0-0.8,0-0.9,1.2c0,0.6,1,0.7,1,0.7l16.8,1.1
 		c0.3,0,0.5-0.2,0.5-0.5l0.3-16.4L365.3,350.1z"/>
-	
+
 		<linearGradient id="XMLID_2_" gradientUnits="userSpaceOnUse" x1="-29.7812" y1="-33.2857" x2="-28.168" y2="-70.3876" gradientTransform="matrix(0.9966 8.207998e-02 -8.207998e-02 0.9966 390.4751 339.2685)">
 		<stop  offset="0" style="stop-color:#EE9224"/>
 		<stop  offset="0.9987" style="stop-color:#EE7421"/>
@@ -49,7 +49,7 @@
 		c0.5,0,0.9-0.5,0.8-1c-2.3-7.2-14.5-49.4-3.1-100.5"/>
 	<path fill="#044982" d="M321.7,350.9l-1.5,11.4c0,0.4-0.3,0.6-0.6,0.7l-9.2,2.2c0,0-0.8,0-0.9,1.2c0,0.6,1,0.7,1,0.7l16.8,1.1
 		c0.3,0,0.5-0.2,0.5-0.5l0.3-16.4L321.7,350.9z"/>
-	
+
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-7690.6274" y1="-194.327" x2="-7692.0103" y2="-241.2461" gradientTransform="matrix(-0.9926 -0.1216 -0.1216 0.9926 -7317.8672 -446.7679)">
 		<stop  offset="0" style="stop-color:#EE9224"/>
 		<stop  offset="0.9987" style="stop-color:#EE8024"/>
@@ -65,7 +65,7 @@
 		c1.5,0.4,6.9,4.2,7.9,5.4c1.2,1.5,1.8,3.6,1.9,5.4C367.4,163.2,370.7,175.3,369.8,177.8z"/>
 </g>
 <g>
-	
+
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="2891.0642" y1="525.2798" x2="2902.3516" y2="525.2798" gradientTransform="matrix(0.9709 -0.2393 0.2393 0.9709 -2824.4783 345.7108)">
 		<stop  offset="0" style="stop-color:#EE9224"/>
 		<stop  offset="1" style="stop-color:#FCB850"/>
@@ -88,7 +88,7 @@
 			<stop  offset="0.9987" style="stop-color:#0452A0"/>
 		</linearGradient>
 		<use xlink:href="#XMLID_45_"  overflow="visible" fill="url(#XMLID_3_)"/>
-		<clipPath id="XMLID_4_">
+		<clipPath id="XMLID_4_1">
 			<use xlink:href="#XMLID_45_"  overflow="visible"/>
 		</clipPath>
 	</g>
@@ -99,13 +99,13 @@
 			<path id="XMLID_44_" d="M134.4,257c0,0,1.2,55.8-10.3,102.5c-0.1,0.4-0.6,0.7-1,0.7l-9.5,0.8c-0.6,0-1-0.5-0.8-1
 				c2.4-7.5,11.3-51.9,3.2-104.8"/>
 		</defs>
-		
+
 			<linearGradient id="XMLID_5_" gradientUnits="userSpaceOnUse" x1="1998.0087" y1="-217.4814" x2="1993.4159" y2="-252.0806" gradientTransform="matrix(-0.9966 8.207998e-02 8.207998e-02 0.9966 2133.2097 339.2685)">
 			<stop  offset="0" style="stop-color:#3D83FA"/>
 			<stop  offset="0.9987" style="stop-color:#0452A0"/>
 		</linearGradient>
 		<use xlink:href="#XMLID_44_"  overflow="visible" fill="url(#XMLID_5_)"/>
-		<clipPath id="XMLID_6_">
+		<clipPath id="XMLID_6_2">
 			<use xlink:href="#XMLID_44_"  overflow="visible"/>
 		</clipPath>
 	</g>

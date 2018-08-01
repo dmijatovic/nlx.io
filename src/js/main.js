@@ -22,13 +22,13 @@ window.addEventListener('scroll', () => {
     }
 })
 
-const hoverElements = document.querySelectorAll('.compare-highlight');
+const hoverElements = document.querySelectorAll('[data-highlight]');
 
 Array.from(hoverElements).forEach(hoverElement => {
-    const thisId = hoverElement.id
+
+    const thisId = hoverElement.getAttribute('data-highlight')
 
     const wrapper = hoverElement.closest('.comparison_side')
-    const wrapperId = wrapper.id
 
     hoverElement.addEventListener('mouseenter', () => {
         wrapper.classList.add(`highlight-${thisId}`)

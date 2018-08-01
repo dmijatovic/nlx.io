@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+        <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
 
         <title>{{ .Title }} {{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
     </head>
@@ -40,8 +41,8 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link nav-svg" href="https://github.com/VNG-Realisatie/nlx" target="_blank" aria-label="GitHub">
-                                {{ readFile "static/svg/github.svg" | safeHTML }}
+                            <a class="nav-link p-3" href="https://gitlab.com/commonground/nlx" target="_blank" aria-label="GitLab">
+                                {{ readFile "static/svg/gitlab.svg" | safeHTML }}
                             </a>
                         </li>
                         <!-- <li class="nav-item">
@@ -65,4 +66,4 @@
             </div>
         </header>
 
-        <main role="main">
+        <main>
