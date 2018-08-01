@@ -21,75 +21,16 @@ main {
     justify-content: center;
 }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0;
-    z-index: 1;
-}
-
-.navbar-logo {
-    margin-right: 20px;
-
-    svg {
-        height: 26px;
-    }
-}
-
-.navbar-expand {
-    > .container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .navbar-nav .nav-item {
-        padding: 20px 0;
-
-        &.nav-item--lang {
-            position: relative;
-            overflow: hidden;
-
-            svg {
-                position: absolute;
-                top: 27px;
-                left: 1px;
-                height: 44px;
-                z-index: -1;
-            }
-        }
-        .nav-link {
-            display: inline-flex;
-            align-items: center;
-            height: 56px;
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: 20px;
-            padding-right: 20px;
-            color: white;
-
-            &:hover {
-                color: $dark;
-            }
-        }
-
-        &.active .nav-link {
-            color: $primary;
-        }
-    }
-}
-
 svg {
     display: block;
 }
 
 a {
-    transition: $transition-base;    
+    transition: $transition-base;
 }
 
 h3 {
-    color: $gray-900;    
+    color: $gray-900;
     font-size: 1.8rem;
     margin-bottom: .6rem;
 
@@ -99,7 +40,7 @@ h3 {
 }
 
 h4 {
-    color: $gray-900;    
+    color: $gray-900;
     font-size: 1.4rem;
     font-weight: $font-weight-medium;
     margin-left: 2rem;
@@ -138,7 +79,7 @@ p {
     padding-bottom: 10px;
 
     box-shadow: 0 3px 0 transparentize($primary, .8);
-    
+
     &:not(.disabled):not(.disabled) {
         &:hover,
         &:active {
@@ -159,6 +100,11 @@ p {
     @include media-breakpoint-up(md) {
         padding: 6rem 0;
     }
+
+    &:last-child {
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .display-5  {
@@ -173,7 +119,7 @@ small, .small {
 .sm-order-1 {
     @include media-breakpoint-down(sm) {
         order: 1;
-    }    
+    }
 }
 
 .tooltip-inner {

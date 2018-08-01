@@ -17,6 +17,12 @@ googleAnalytics = ""
     identifier = "docs"
     url = "https://docs.nlx.io/"
 
+[[menu.main]]
+    name = "Directory"
+    weight = -80
+    identifier = "directory"
+    url = "https://directory.demo.nlx.io/"
+
 [languages]
 [languages.en]
 weight = 0

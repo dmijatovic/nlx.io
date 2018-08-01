@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
     const illustrationsHeight = document.querySelector('.landing_illustrations').getBoundingClientRect().height;
 
     if (scrollY > illustrationsHeight) {
-        tl.pause()        
+        tl.pause()
     } else {
         tl.play()
     }
@@ -45,10 +45,12 @@ $(function () {
     })
 })
 
-document.querySelector('#goto').onclick = function (e) {
-    console.log('scroll')
-    e.preventDefault()
-    scrollToElement(this.getAttribute('href'), 1250)
+const gotoButton = document.querySelector('#goto')
+if (gotoButton) {
+    gotoButton.onclick = function (e) {
+        e.preventDefault()
+        scrollToElement(this.getAttribute('href'), 1250)
+    }
 }
 
 /**
