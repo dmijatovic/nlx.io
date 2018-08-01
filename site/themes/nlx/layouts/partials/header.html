@@ -18,14 +18,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <a class="navbar-logo" href="{{ .Permalink }}">
-                        {{ readFile "static/svg/logo.svg" | safeHTML }}
+                    <a class="navbar-logo" href="/">
+                        {{ if .IsHome }}
+                            {{ readFile "static/svg/logo-white.svg" | safeHTML }}
+                        {{end}}
+                        {{ if not .IsHome }}
+                            {{ readFile "static/svg/logo.svg" | safeHTML }}
+                        {{end}}
                     </a>
 
                     <ul class="navbar-nav">
                         {{ $currentPage := . }}
                         {{ range .Site.Menus.main }}
-                            <li class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{end}}">
+                            <li class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
                                 <a class="nav-link" href="{{ .URL | absLangURL }}">
                                     {{ .Name }}
                                     {{ if $currentPage.IsMenuCurrent "main" . }}<span class="sr-only">(active)</span>{{end}}

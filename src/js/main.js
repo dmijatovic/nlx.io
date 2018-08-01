@@ -45,9 +45,12 @@ $(function () {
     })
 })
 
-document.querySelector('#goto').onclick = function (e) {
-    e.preventDefault()
-    scrollToElement(this.getAttribute('href'), 1250)
+const gotoButton = document.querySelector('#goto')
+if (gotoButton) {
+    gotoButton.onclick = function (e) {
+        e.preventDefault()
+        scrollToElement(this.getAttribute('href'), 1250)
+    }
 }
 
 /**

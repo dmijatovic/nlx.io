@@ -5,17 +5,23 @@ title = "NLX"
 theme = "nlx"
 googleAnalytics = ""
 
-# [[menu.main]]
-#     name = "About"
-#     weight = -100
-#     identifier = "about"
-#     url = "/about/"
+[[menu.main]]
+    name = "Over NLX"
+    weight = -100
+    identifier = "about"
+    url = "/about/"
 
 [[menu.main]]
     name = "Docs"
     weight = -90
     identifier = "docs"
     url = "https://docs.nlx.io/"
+
+[[menu.main]]
+    name = "Directory"
+    weight = -80
+    identifier = "directory"
+    url = "https://directory.demo.nlx.io/"
 
 [languages]
 [languages.en]

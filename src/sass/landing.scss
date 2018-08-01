@@ -43,7 +43,7 @@
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
-                background-color: $sec-500;
+                background-color: $primary;
                 margin-left: -23px;
                 margin-right: 15px;
                 margin-bottom: 2px;
@@ -320,9 +320,14 @@ $color-off: #0452A0;
 .compare-highlight {
     padding: 1px 8px 5px;
     border-radius: 3px;
-    background-color: $sec-100;
     color: $secondary;
+    border: 1px solid $sec-500;
     cursor: default;
+    transition: background-color $trans-normal;
+
+    &:hover {
+        background-color: $sec-100;
+    }
 }
 
 #whatsnew {
@@ -332,16 +337,6 @@ $color-off: #0452A0;
 }
 
 .page-landing {
-    main {
-        @include media-breakpoint-down(xl) {
-            font-size: 1.05rem;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 1.15rem;
-        }
-    }
-
     h3 {
         @include media-breakpoint-down(md) {
             margin-top: 1rem;
