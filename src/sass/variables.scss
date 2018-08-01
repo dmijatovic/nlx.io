@@ -55,7 +55,24 @@ $container-max-widths: (
 );
 
 // Grid
-$grid-gutter-width:             60px;
+$grid-gutter-width:             30px;
+$grid-gutter-width-lg:          60px; // not bootstrap
+
+.container.gutter-lg,
+.container-fluid.gutter-lg {
+    padding-left: $grid-gutter-width-lg / 2;
+    padding-right: $grid-gutter-width-lg / 2;
+
+    .row {
+        margin-right: $grid-gutter-width-lg / -2;
+        margin-left: $grid-gutter-width-lg / -2;
+
+        > [class*="col-"] {
+            padding-left: $grid-gutter-width-lg / 2;
+            padding-right: $grid-gutter-width-lg / 2;
+        }
+    }
+}
 
 // Padding
 $input-btn-padding-y-lg:        .5rem;
