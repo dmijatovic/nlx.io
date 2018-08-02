@@ -1,5 +1,3 @@
-// import '/node_modules/bootstrap/dist/bootstrap.js';
-
 const tl = new TimelineMax({
     repeat: -1
 })
@@ -13,12 +11,16 @@ tl.fromTo("#dashedlines path", 10, {
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY
-    const illustrationsHeight = document.querySelector('.landing_illustrations').getBoundingClientRect().height;
 
-    if (scrollY > illustrationsHeight) {
-        tl.pause()
-    } else {
-        tl.play()
+    const illustrations = document.querySelector('.landing_illustrations')
+    if (illustrations) {
+        const illustrationsHeight = illustrations.getBoundingClientRect().height;
+
+        if (scrollY > illustrationsHeight) {
+            tl.pause()
+        } else {
+            tl.play()
+        }
     }
 })
 
